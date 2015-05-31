@@ -1,3 +1,12 @@
+/**思路是：helper(string, 开始，字段，item，res)
+isValid函数
+这道题目的几个细节：
+使用segment是个想法
+for语句里面int 从1开始 是位了substring(start+i)的正常。。。不然从0开始就是空了
+里面判断要分第一个和其他 其他要加. 第一个则不加
+判断isvalid的时候，如果开头是0并且长度大于1的是无效的！注意了
+*/
+
 public class Solution {
     public ArrayList<String> restoreIpAddresses(String s) {
         ArrayList<String> res = new ArrayList<String>();

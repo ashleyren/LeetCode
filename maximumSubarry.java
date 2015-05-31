@@ -1,3 +1,7 @@
+/*
+这里要注意的就是， 假设local[i]一定是包含nums[i]的，所以在去local最大的时候
+local[i] = Math.max(nums[i], nums[i] + local[i-1]);理解了这个local[i]这个题目就迎刃而解了
+*/
 public class Solution {
     public int maxSubArray(int[] nums) {
         if(nums == null || nums.length == 0) return 0;
