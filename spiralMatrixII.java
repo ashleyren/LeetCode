@@ -1,3 +1,7 @@
+/*
+和spiral matrix 是一样的，比1还要简单一些，
+就是最后奇偶数判断的时候看是不是多出一个点。
+*/
 public class Solution {
     public int[][] generateMatrix(int n) {
         int[][] matrix = new int[n][n];

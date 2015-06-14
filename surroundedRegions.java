@@ -1,3 +1,8 @@
+/*
+思路其实很简单，使用BFS从四条边出发，找出没有被围住的O，把他们标记成#，
+然后剩下的O就都是被围住的，把他们变成X，在把原先的#变回O
+注意的是 这里的BFS是值得每次往里面推一格，不像普通二叉树的BFS是左右子节点。
+*/
 public class Solution {
     public void solve(char[][] board) {
         if(board == null || board.length <=1 || board[0].length <= 1) return;

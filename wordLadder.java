@@ -35,7 +35,7 @@ public class Solution {
     private String replace(String s, int index, char c){
         char[] chars = s.toCharArray();
         chars[index] = c;
-        return new String(chars);
+        return new String(chars);// 这个地方要注意，不能使用toString了要使用new String() 或者是 String.valueOf(chars)
     }
 }
 

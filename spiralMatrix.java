@@ -1,3 +1,12 @@
+/*
+这一题最大的在于坐标的定位，很精细不要出错。
+根据level，一个level是一圈，来加入res。
+然后就是奇偶数的判断，小的维度是偶数的时候，按圈数就全部走完。
+小的维度是奇数，圈数走完最后还剩下一行或者一列，当行数>列数 最后走一列
+行数<列数 最后走一行
+画出4*5 5*4
+5*6 6*5的matrix可以帮助理解。
+*/
 public class Solution {
     public ArrayList<Integer> spiralOrder(int[][] matrix) {
         ArrayList<Integer> res = new ArrayList<Integer>();

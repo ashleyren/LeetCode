@@ -1,3 +1,7 @@
+// 这题是一个简单版 recursive迭代的方法。每次传入两个head节点 和carry位
+//进阶 参考career cup第五版 2.5
+当顺序相反的时候要怎么做.
+我想到的是先把两个LinkedList逆序,然后使用这个顺序的方法 最后再把结果逆序.
 /**
  * Definition for singly-linked list.
  * public class ListNode {

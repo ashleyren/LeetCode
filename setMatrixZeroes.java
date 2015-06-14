@@ -1,3 +1,12 @@
+/*
+前两种简单的方法 一个是存单独的0矩阵 另外一个是存行列boolean[]数组
+优化的方法，使用第一行和第一列来存是否变0: 那么要行列两个flag，首先看他们是不是最后归0
+然后出去第一行第一列开始逐个如果为0就把第一行第一列的值变为0
+然后遍历第二遍如果行列有0就变0
+最后两个flag判断完毕就ok了
+time O(m*n) space O(1)
+*/
+
 public class Solution {
     public void setZeroes(int[][] matrix) {
         if(matrix == null ||matrix.length == 0 || matrix[0].length == 0) return;

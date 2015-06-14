@@ -1,3 +1,8 @@
+/*
+重点在于HashSet的使用 每行 每列 每个小块
+小块的循环怎么写？使用一个k从0~8 行号是k/3*3 ~ k/3*3+3 列号 k%3*3 ~ k%3*3+3
+Time: O(3*n^2), n=9
+*/
 public class Solution {
     public boolean isValidSudoku(char[][] board) {
         HashSet<Character> set = new HashSet<Character>();
