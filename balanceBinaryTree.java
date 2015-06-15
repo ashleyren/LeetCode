@@ -1,3 +1,6 @@
+// 算法的时间是一次树的遍历O(n)，空间是栈高度O(logn)
+//使用一个helper 当两边相等返回高度,不等的时候返回-1
+// 注意读题,两边高度相差值小于等于1都是平衡树
 /**
  * Definition for binary tree
  * public class TreeNode {
