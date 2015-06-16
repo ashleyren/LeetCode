@@ -1,34 +1,33 @@
 public class Solution {
     public int threeSumClosest(int[] nums, int target) {
-        if(nums == null || nums.length < 3) return Integer.MIN_VALUE;
+        if(nums == null || nums.length < 3) return -1;
+        int closest = Integer.MAX_VALUE;//min diff
         Arrays.sort(nums);
-        int closest = nums[0] + nums[1] + nums[2] - target;
-        for(int i = 0; i <= nums.length-3; i++){
-            int tmp = helper(nums,target - nums[i], i+1);
+        for(int i = 0; i < nums.length-2; i++){
+            int tmp = helper(nums,i+1,target-nums[i]);
             if(Math.abs(tmp) < Math.abs(closest)){
                 closest = tmp;
             }
         }
-        return closest+target;
+        return target + closest;
     }
-    
-    private int helper(int[] nums, int target, int left){
-        int right = nums.length -1;
-        int closest = nums[left] + nums[right] - target;
+    //数组从left开始,返回的是和target的最小差...
+    private int helper(int[] nums, int left, int target){
+        int right = nums.length - 1;
+        int min_Diff = Integer.MAX_VALUE;
         while(left < right){
-            int tmp = nums[left] + nums[right] - target;
-            if(tmp == 0){
-                return 0;
+            int diff = nums[left] + nums[right] - target;
+            if(Math.abs(diff) < Math.abs(min_Diff)){
+                min_Diff = diff;
             }
-            if(Math.abs(tmp) < Math.abs(closest)){
-                closest = tmp;
-            }
-            if(tmp > 0){
+            if(diff == 0){
+                return 0;//没有差别
+            }else if(diff > 0){
                 right--;
             }else{
                 left++;
             }
         }
-        return closest;
+        return min_Diff;
     }
 }

@@ -1,11 +1,5 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
+// 思路是切半,递归调用sort子链表,再合并
+
 public class Solution {
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) { //z这个第一步的判断不能够忘记！

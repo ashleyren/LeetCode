@@ -6,7 +6,7 @@ public int minDepth(TreeNode root) {
     return Math.min(minDepth(root.right), minDepth(root.left)) + 1;
 }
 
-//非递归如何实现?
+//非递归实现
 public class Solution {
     public int minDepth(TreeNode root) {
         if(root == null) return 0;
