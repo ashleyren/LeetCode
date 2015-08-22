@@ -34,7 +34,7 @@ public class Solution {
                 
             }
         }
-        return map.get(node);//返回node的copy
+        return copy;//返回node的copy
     }
 }
 //DFS 深度优先遍历 -- 递归
@@ -64,6 +64,7 @@ public class Solution {
 }
 
 //DFS 深度优先遍历 使用stack，每次就压如stack, 当stack为空就结束。。。其他的和前两种方法很相似
+//wait..这是广度优先遍历把....
 
 public class Solution {
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
